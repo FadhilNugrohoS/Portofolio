@@ -427,6 +427,32 @@ section{
     height: 600px;
 }
 
+.project-content .card:hover{
+    transform: scale(1.0);
+    transition: .5s;
+    box-shadow: 0 0 20px #33ffbe;
+    transition: .5s;
+}
+
+.project-content .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #33ffbe;
+    opacity: .1;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .5s;
+}
+
+.project-content .card:hover::before{
+    width: 100%;
+    transition: .5s;
+}
+
 .project-content .card img{
     padding: 1rem;
     width: 100%;
@@ -526,6 +552,25 @@ section{
     box-shadow: 0 0 10px #33ffbe;
 }
 
+.project1-content .card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg-color);
+    opacity: 1;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .8s;
+}
+
+.project1-content .card:hover::before{
+    width: 100%;
+    transition: .8s;
+}
+
 .card-header {
     background-color: #383838;
     border-bottom: #33ffbe 1.5px solid;
@@ -551,11 +596,7 @@ section{
 }
 
 .card-body img{
-    margin: 1rem 0;
-}
-
-.card-body .content img{
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 .card-body h3{

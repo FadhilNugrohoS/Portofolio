@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- My Css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Fadhil Nugroho S | Project 1</title>
 </head>
 
@@ -26,10 +26,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active" aria-current="page" href="#profile">Profile</a>
-                        <a class="nav-link" href="#techstack">Education</a>
-                        <a class="nav-link" href="#techstack">TechStack</a>
-                        <a class="nav-link" href="#project">Project</a>
+                        <a class="nav-link" aria-current="page" href="index.html#profile">Profile</a>
+                        <a class="nav-link" href="index.html#techstack">Education & Techstack</a>
+                        <a class="nav-link" href="index.html#project">Project</a>
                     </div>
                 </div>
             </div>
@@ -46,21 +45,29 @@
                         <div class="row justify-content-center">
                             <div class="col-md-12 col-lg-6">
                                 <div class="card-body">
-                                    <img src="img/project/project-1/hasil_peramalan.png" alt="Project1"
-                                        class="img-fluid img-thumbnail">
-                                    <div class="content">
-                                        <div class="row">
-                                            <div class="col md-2">
-                                                <img src="img/project/project-1/peramalan.png" alt="Project1"
-                                                    class="img-fluid img-thumbnail">
+                                    <div class="w3-content" style="max-width:1200px">
+                                        <img class="mySlides" src="img/project/project-1/hasil_peramalan.png"
+                                            style="width:100%;display:none">
+                                        <img class="mySlides" src="img/project/project-1/peramalan.png"
+                                            style="width:100%">
+                                        <img class="mySlides" src="img/project/project-1/pemesanan.png"
+                                            style="width:100%;display:none">
+
+                                        <div class="w3-row-padding w3-section">
+                                            <div class="w3-col s4">
+                                                <img class="demo w3-opacity w3-hover-opacity-off"
+                                                    src="img/project/project-1/barang.png"
+                                                    style="width:100%;cursor:pointer" onclick="currentDiv(1)">
                                             </div>
-                                            <div class="col md-2">
-                                                <img src="img/project/project-1/pemesanan.png" alt="Project1"
-                                                    class="img-fluid img-thumbnail">
+                                            <div class="w3-col s4">
+                                                <img class="demo w3-opacity w3-hover-opacity-off"
+                                                    src="img/project/project-1/hasil_peramalan.png"
+                                                    style="width:100%;cursor:pointer" onclick="currentDiv(2)">
                                             </div>
-                                            <div class="col md-2">
-                                                <img src="img/project/project-1/Dashboard.png" alt="Project1"
-                                                    class="img-fluid img-thumbnail">
+                                            <div class="w3-col s4">
+                                                <img class="demo w3-opacity w3-hover-opacity-off"
+                                                    src="img/project/project-1/pemesanan.png"
+                                                    style="width:100%;cursor:pointer" onclick="currentDiv(3)">
                                             </div>
                                         </div>
                                     </div>
@@ -90,13 +97,17 @@
                                         1.Membuat Database menggunakan MySQL.<br>
                                         2.Mengembangkan Sistem Peramalan Penjualan menggunakan Framework Laravel.<br>
                                         3.Mendesain Dashboard menggunakan Framework Bootstrap.<br>
-                                        4.Mengimplementasikan sistem Login menggunakan Framework Laravel dan Bootstrap.<br>
-                                        5.Secara otomatis menerapkan Metode Single Exponential Smoothing untuk Peramalan<br>
+                                        4.Mengimplementasikan sistem Login menggunakan Framework Laravel dan
+                                        Bootstrap.<br>
+                                        5.Secara otomatis menerapkan Metode Single Exponential Smoothing untuk
+                                        Peramalan<br>
                                         6.Penjualan menggunakan Framework Laravel.<br>
-                                        7.Secara otomatis menghasilkan Perhitungan Rekap Penjualan untuk Setiap Produk per
+                                        7.Secara otomatis menghasilkan Perhitungan Rekap Penjualan untuk Setiap Produk
+                                        per
                                     </p>
                                     <p class="github">
-                                        Source Code : <a href="https://github.com/FadhilNugrohoS/ses"><i class="bi bi-github"></i></a>
+                                        Source Code : <a href="https://github.com/FadhilNugrohoS/ses"><i
+                                                class="bi bi-github"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -113,5 +124,30 @@
     </div>
     </section>
 </body>
+<script>
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+    }
+</script>
 
 </html>
