@@ -212,7 +212,12 @@ section{
     transition: 2s;
 }
 
-.profile-img:hover{
+.profile-img img{
+    padding-top: 3rem;
+    height: 400px;
+    transition: 2s;
+}
+.profile-img img:hover{
     transform: var(--bg-color);
     opacity: .5;
 }
