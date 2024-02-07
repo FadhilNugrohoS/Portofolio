@@ -214,33 +214,23 @@ section{
     transition: 2s;
 }
 
-.circle-spin{
-    position: absolute;
-    top: 50%;
-    left: 50.5%;
-    transform: translate(-50%,-50%) rotate(0deg);
-    width: 410px;
-    height: 410px;
-    border-radius: 80%;
-    border-top: 1px solid #33ffbe;
-    border-bottom: 1px solid #33ffbe;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
-    animation: aboutSpinner 8s linear infinite;
-}
-
 .profile-img img{
+    margin-top: 3rem;
     margin-left: 1.5rem;
     width: 90%;
     height: 90%;
     transition: 2s;
     border-radius: 50%;
-    border: 1px solid #33ffbe;
+    border: .1rem solid #33ffbe;
+    box-shadow: 0px 0 30px #33ffbe;
 }
 
 
 .profile-img img:hover{
     transform: var(--bg-color);
+    border: 1px solid #33ffbe;
+    transition: 2s;
+    box-shadow: none;
     opacity: .5;
 }
 
@@ -704,79 +694,5 @@ section{
     75%,
     81%{
         opacity: 0;
-    }
-}
-
-
-/* Media */
-
-@media (max-width: 1400px){
-    .circle-spin{
-        left: 51%;
-        width: 350px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 1200px){
-    .circle-spin{
-        left: 51.5%;
-        width: 350px;
-        height: 350px;
-    }
-    
-}
-
-@media (max-width: 1200px) {
-    .circle-spin{
-        left: 52%;
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media (max-width: 992px){
-    .circle-spin{
-        left: 52.5%;
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media (max-width: 991px){
-    .circle-spin{
-        left: 48.5%;
-        width: 660px;
-        height: 660px;
-    }
-}
-
-@media (max-width: 768px){
-    .circle-spin{
-        left: 49.5%;
-        width: 500px;
-        height: 500px;
-    }
-}
-
-@media (max-width: 576px){
-    .circle-spin{
-        width: 520px;
-        height: 520px;
-    }
-}
-
-@media (max-width: 480px){
-    .circle-spin{
-        width: 440px;
-        height: 440px;
-    }
-}
-
-@media (max-width: 408px){
-    .circle-spin{
-        left: 50.5%;
-        width: 380px;
-        height: 380px;
     }
 }
