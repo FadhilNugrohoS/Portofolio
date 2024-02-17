@@ -625,6 +625,13 @@ section{
     text-align: justify;
 }
 
+.card-body p.builth{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #33ffbe;
+    text-align: justify;
+}
+
 .card-body p.github a i{
     font-size: 1.5rem;
     font-weight: 500;
