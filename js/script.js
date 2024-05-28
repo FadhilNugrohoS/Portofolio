@@ -1,37 +1,35 @@
+(function () {
+  "use strict";
 
+  // make a active class in the navbar
+  var header = document.getElementById("navbarNav");
+  var btns = header.getElementsByClassName("nav-link");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("nav-link active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 
-// make a active class in the navbar
-var header = document.getElementById("navbarNav");
-var btns = header.getElementsByClassName("nav-link");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("nav-link active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
-// make navbar can be closed by clicking the button again in mobile view
-document.addEventListener('DOMContentLoaded', function() {
+  // make navbar can be closed by clicking the button again in mobile view
+  document.addEventListener('DOMContentLoaded', function () {
     var navbarToggler = document.querySelector('.navbar-toggler');
     var navbarMenu = document.querySelector('.navbar-collapse');
 
-    navbarToggler.addEventListener('click', function() {
-        navbarMenu.classList.toggle('collapse');
+    navbarToggler.addEventListener('click', function () {
+      navbarMenu.classList.toggle('collapse');
     });
-});
+  });
 
 
 
 
 
-var copy = document.querySelector(".techstack-items").cloneNode(true);
-document.querySelector(".techstack-content").appendChild(copy);
+  var copy = document.querySelector(".techstack-items").cloneNode(true);
+  document.querySelector(".techstack-content").appendChild(copy);
 
-(function(){
-    "use strict";
-
-    /**
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
@@ -71,7 +69,7 @@ document.querySelector(".techstack-content").appendChild(copy);
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -80,7 +78,7 @@ document.querySelector(".techstack-content").appendChild(copy);
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '#navbar .nav-link', function(e) {
+  on('click', '#navbar .nav-link', function (e) {
     let section = select(this.hash)
     if (section) {
       e.preventDefault()
@@ -113,7 +111,7 @@ document.querySelector(".techstack-content").appendChild(copy);
 
       if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
-        setTimeout(function() {
+        setTimeout(function () {
           sections.forEach((item) => {
             item.classList.remove('section-show')
           })
@@ -152,7 +150,7 @@ document.querySelector(".techstack-content").appendChild(copy);
           }
         })
 
-        setTimeout(function() {
+        setTimeout(function () {
           initial_nav.classList.add('section-show')
         }, 350);
 
@@ -174,9 +172,9 @@ document.querySelector(".techstack-content").appendChild(copy);
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -222,8 +220,9 @@ document.querySelector(".techstack-content").appendChild(copy);
     }
   });
 
-    /**
+  /**
    * Initiate Pure Counter 
    */
-    new PureCounter();
+  new PureCounter();
+  
 })()

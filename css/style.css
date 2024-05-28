@@ -518,6 +518,8 @@ section {
     bottom: 15px;
     right: 15px;
   }
+
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -582,21 +584,11 @@ section {
       padding-top: 20px;
     }
   }
-  
-  .portfolio-details .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .portfolio-details .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
-  .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #18d26e;
+
+  .portfolio-details .carousel-inner img {
+    width: 80%;
+    height: 80%;
+    margin: auto auto;
   }
 
 
@@ -620,4 +612,44 @@ section {
     height: 60px;
     margin: 0 25px;
   }
+}
+
+/* Footer */
+#footer {
+    background: #000;
+    padding: 50px 0;
+    color: var(--primary-text);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer .social-links {
+    margin-top: 20px;
+}
+
+#footer a {
+  margin-right: 8px;
+  font-size: 24px;
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  color: var(--primary-text);
+  background-color: #535353;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: ease-out 0.3s;
+}
+
+#footer a:hover {
+  color: var(--primary-text);
+  background-color: var(--primary-color);
+  transition: ease-in 0.3s;
 }
