@@ -540,9 +540,9 @@ section {
   }
   
   .portfolio-details .portfolio-title {
-    color: var(--primary-text);
+    color: var(--primary-color);
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
   }
   
@@ -552,9 +552,9 @@ section {
   }
   
   .portfolio-details .portfolio-info h3 {
-    color: var(--primary-text);
+    color: var(--primary-color);
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 20px;
   }
   
@@ -569,6 +569,10 @@ section {
   }
   
   .portfolio-details .portfolio-info ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
     color: var(--primary-color);
   }
   
